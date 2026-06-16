@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "build": "rm -rf dist && cp -R src dist",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,8 @@
     "monodb": "^1.5.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3"
   }
 }
