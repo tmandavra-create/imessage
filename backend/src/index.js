@@ -8,6 +8,8 @@ import path from "path";
 import  User from "./models/user.model.js";
 import { connectDB } from "./lib/db.js";
 import { clerkMiddleware } from "@clerk/express";
+import job from "./lib/cron.js";
+import clerkWebhook from "./webhooks/clerk.webhook.js";
 
 
 const app = express();
@@ -44,5 +46,7 @@ if (fs.existsSync(publicDir)) {
 app.listen(PORT, () => {
     connectDB();
     console.log("Server is running on PORT:", PORT);
+
+    if (process.env.NODE_ENV === "production") job.start();
 
 });
