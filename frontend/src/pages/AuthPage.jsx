@@ -1,6 +1,6 @@
-import { AuthActionPanel } from "../components/auth/AuthActionPanel";
-import AuthHeader from "../components/auth/AuthHeader";
-import { AuthHeroPanel } from "../components/auth/AuthHeroPanel";
+import { AuthActionPanel } from "../components/Auth/AuthActionPanel";
+import AuthHeader from "../components/Auth/AuthHeader";
+import { AuthHeroPanel } from "../components/Auth/AuthHeroPanel";
 import { useWallpaper } from "../context/wallpaper";
 
 function AuthPage() {
